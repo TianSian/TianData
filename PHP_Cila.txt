@@ -1,0 +1,14 @@
+<?php
+$date = new DateTime('2023-05-21');
+$currentDate = new DateTime();
+$interval = $currentDate->diff($date);
+$daysLeft = $interval->format('%a');
+
+if ($daysLeft === '0') {
+    echo "Selamat ulang tahun, Arsyila Tsuraya Elsanum! Saat ini adalah hari ulang tahunmu. Semoga hari ulang tahunmu penuh dengan kebahagiaan!";
+} elseif ($daysLeft === '1') {
+    echo "Selamat ulang tahun, Arsyila Tsuraya Elsanum! Tinggal 1 hari lagi sebelum hari ulang tahunmu. Semoga kamu mendapatkan persiapan yang baik untuk merayakan hari spesial ini!";
+} else {
+    echo "Selamat ulang tahun, Arsyila Tsuraya Elsanum! Tinggal " . $daysLeft . " hari lagi sebelum hari ulang tahunmu. Semoga kamu memiliki waktu yang menyenangkan dalam menantikan hari spesial ini!";
+}
+?>
